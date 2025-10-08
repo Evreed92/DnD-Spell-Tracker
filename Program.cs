@@ -7,7 +7,7 @@ Application.Init();
 try
 {
     //Application.Run(new MyView());
-    Application.Run(new CharacterListView());
+    Application.Run(new MyView());
 }
 finally
 {

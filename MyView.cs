@@ -7,6 +7,8 @@
 //      You can make changes to this file and they will not be overwritten when saving.
 //  </auto-generated>
 // -----------------------------------------------------------------------------
+using myTuiProj.Views; 
+
 namespace myTuiProj{
     using Terminal.Gui;
     
@@ -15,8 +17,11 @@ namespace myTuiProj{
         
         public MyView() {
             InitializeComponent();
-            //button1.Clicked += () => MessageBox.Query("Hello", "Hello There Evan!", "Ok");
-             
+            button1.Clicked += () => 
+            {
+                Application.Top.RemoveAll();
+                Application.Top.Add(new CharacterListView());
+            };
 
         }
     }
