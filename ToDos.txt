@@ -1,0 +1,5 @@
+- Create Navigation Service Class that handles page navigation as a stack with pop and push functionality
+- Create Home View
+- Create CharacterSummary class and edit CharacterListView to utilize it.
+- Create Expanded CharacterView for individual characters and general spell casting information
+- Create More detailed CharacterView and SpellListViews

@@ -9,6 +9,7 @@ namespace myTuiProj.Views
     public partial class CharacterListView : Window
     {
         public ListView _characterListView;
+        public Button _backButton;
 
         private void Init()
         {
@@ -19,8 +20,13 @@ namespace myTuiProj.Views
                 Width = Dim.Fill(),
                 Height = Dim.Fill(),
             };
-
+            _backButton = new Button("Back") { X = 10, Y = 10 };
+            _backButton.Clicked += () =>
+            {
+                Application.RequestStop();
+            };
             Add(_characterListView);
+            Add(_backButton);
         }
     }
 }

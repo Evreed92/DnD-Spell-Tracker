@@ -20,7 +20,8 @@ namespace myTuiProj{
             button1.Clicked += () => 
             {
                 Application.Top.RemoveAll();
-                Application.Top.Add(new CharacterListView());
+                Application.Run(new CharacterListView());
+                Application.Refresh();
             };
 
         }
