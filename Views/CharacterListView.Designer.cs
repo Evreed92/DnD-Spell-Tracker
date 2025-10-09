@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using myTuiProj.Domain.Models;
 using myTuiProj.Services.LocalServices;
 using myTuiProj.Services.ServiceInterfaces;
+using myTuiProj.Services.UIServices;
 using Terminal.Gui;
 
 namespace myTuiProj.Views
@@ -20,11 +21,8 @@ namespace myTuiProj.Views
                 Width = Dim.Fill(),
                 Height = Dim.Fill(),
             };
-            _backButton = new Button("Back") { X = 10, Y = 10 };
-            _backButton.Clicked += () =>
-            {
-                Application.RequestStop();
-            };
+            _backButton = new Button("Back" + NavigationService.SeePrevious()) { X = 10, Y = 10 };
+            _backButton.Clicked += () => NavigationService.Back();
             Add(_characterListView);
             Add(_backButton);
         }

@@ -8,7 +8,7 @@
 //  </auto-generated>
 // -----------------------------------------------------------------------------
 using myTuiProj.Views; 
-
+using myTuiProj.Services.UIServices;
 namespace myTuiProj{
     using Terminal.Gui;
     
@@ -17,13 +17,7 @@ namespace myTuiProj{
         
         public MyView() {
             InitializeComponent();
-            button1.Clicked += () => 
-            {
-                Application.Top.RemoveAll();
-                Application.Run(new CharacterListView());
-                Application.Refresh();
-            };
-
+            button1.Clicked += () => NavigationService.Show(new CharacterListView());
         }
     }
 }
