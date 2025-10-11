@@ -7,6 +7,7 @@ using Terminal.Gui;
 
 namespace myTuiProj.Views
 {
+    //CharacterListView.Designer
     public partial class CharacterListView : Window
     {
         public ListView _characterListView;
@@ -21,10 +22,8 @@ namespace myTuiProj.Views
                 Width = Dim.Fill(),
                 Height = Dim.Fill(),
             };
-            _backButton = new Button("Back" + NavigationService.SeePrevious()) { X = 10, Y = 10 };
-            _backButton.Clicked += () => NavigationService.Back();
-            Add(_characterListView);
-            Add(_backButton);
+
+            this.Add(_characterListView);
         }
     }
 }

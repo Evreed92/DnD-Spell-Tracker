@@ -12,48 +12,40 @@ namespace myTuiProj.Services.UIServices
             return initial;
         }
 
-        public static void Show(Window next)
+        public static Window Show(Window next)
         {
-            var top = Application.Top;
-            if (top.Subviews.Count > 0 && top.Subviews[0] is Window current)
-            {
-                _history.Push(current);
-            }
-
-            top.RemoveAll();
-            top.Add(next);
-            next.SetFocus();
-            Application.Refresh();
+            return (next);
         }
-
-        public static void Back()
-        {
-            var top = Application.Top;
-
-            if (_history.Count == 0)
-            {
-                Application.RequestStop();
-                return;
-            }
-
-            var previous = _history.Pop();
-            top.RemoveAll();
-            top.Add(previous);
-            previous.SetFocus();
-            Application.Refresh();
-        }
-
-        public static string SeePrevious()
-        {
-            var top = Application.Top;
-
-            if (_history.Count > 0)
-            {
-                var previous = _history.Peek();
-                return previous.Title.ToString();
-            }
-
-            return "";
-        }
+        /*
+                public static void Back()
+                {
+                    var top = Application.Top;
+        
+                    if (_history.Count == 0)
+                    {
+                        Application.RequestStop();
+                        return;
+                    }
+        
+                    var previous = _history.Pop();
+                    top.RemoveAll();
+                    top.Add(previous);
+                    previous.SetFocus();
+                    Application.Refresh();
+                }
+        
+                public static string SeePrevious()
+                {
+                    var top = Application.Top;
+        
+                    if (_history.Count > 0)
+                    {
+                        var previous = _history.Peek();
+                        return previous.Title.ToString();
+                    }
+        
+                    return "";
+                }
+        */
     }
 }
