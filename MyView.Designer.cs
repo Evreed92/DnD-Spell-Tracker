@@ -18,8 +18,11 @@ namespace myTuiProj {
         private Terminal.Gui.Label label1;
         
         private Terminal.Gui.Button button1;
+
+        private Terminal.Gui.CheckBox slot;
         
         private void InitializeComponent() {
+            this.slot = new CheckBox();
             this.button1 = new Terminal.Gui.Button();
             this.label1 = new Terminal.Gui.Label();
             this.Width = Dim.Fill(0);
@@ -49,6 +52,9 @@ namespace myTuiProj {
             this.button1.TextAlignment = Terminal.Gui.TextAlignment.Centered;
             this.button1.IsDefault = false;
             this.Add(this.button1);
+            
+            
+           
         }
     }
 }

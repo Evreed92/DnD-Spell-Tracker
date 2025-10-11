@@ -17,7 +17,7 @@ namespace myTuiProj{
         
         public MyView() {
             InitializeComponent();
-            button1.Clicked += () => NavigationService.Show(new CharacterListView());
+           button1.Clicked += () => NavigationService.Show(new CharacterListView());
         }
     }
 }
