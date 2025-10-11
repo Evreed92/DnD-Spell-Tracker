@@ -6,6 +6,12 @@ namespace myTuiProj.Services.UIServices
     {
         private static readonly Stack<Window> _history = new();
 
+        public static Window Init(Window initial)
+        {
+            _history.Push(initial);
+            return initial;
+        }
+
         public static void Show(Window next)
         {
             var top = Application.Top;
