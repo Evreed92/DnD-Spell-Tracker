@@ -1,0 +1,45 @@
+Character Model and Related Data
+
+10.14.25 v1.0
+The Character model is envisioned to be the most used model throughout the application. Serving as a connection Model to a majority of the data simply because all other data is based around each unique character. Now this may or may not mean (as I am still learning and figuring this out) that the character class must contain all other data types within it. There are a variety of ways to connect data, and I am still discovering those and choosing which might best fit what I am trying to do. For now, I will focus on the Core Character data. 
+*Note: Some of this data will be abstracted into other subclasses depending on what best fits the needs of the application
+
+Character Model Data:
+- Player Name : str
+- Character Name : str
+- Character Class List : List<CharacterClass>**
+- Character Level : Derived from Character Class List
+- Ability Scores
+- Race
+- Proficiency Bonus
+
+Some additional Notes
+* Class is a large enough data model that it can stand on its own and probably should considering how much data is determined based on the class and or class list
+* Ability Scores might be enough to have its own model due to the multiple uses it has and its specificity of naming convention. An enum for its name and a specific Ability class might be useful
+
+Class Model Data
+- Class Name : str, enum?
+- Class Level : int
+- SubClass Name : str, enum?
+- Spell Casting Ability : Ability
+- Spell Save DC : int - Derived from Spell Casting Ability
+- Spell Attack Bonus : int - Derived from Spell Casting Ability and Proficiency
+- Spell List : List<Spell>** Does it need to be in this class? or can it be separated?
+- Total Spell Slots : Dictionary<SpellLevel, int> - Derived from Level
+- Available Spell Slots : Dictionary<SpellLevel, int> - Derived from user input and Total Spell Slots
+Ability Model Data
+- Ability Name : str enum?
+- Ability Score : int
+- Ability Modifier : int - Derived from Ability Score
+
+Other Data to consider
+- Spells Known
+- Spell Available
+- Spell Data
+- Spells Known
+- Spells Ready
+
+- Initiative
+- Health
+- Bonus Health
+- Current Health
