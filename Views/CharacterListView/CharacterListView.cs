@@ -15,16 +15,14 @@ namespace myTuiProj.Views
             : base("Character List")
         {
             _characterService = new LocalCharacterService();
-            Init();
+            Draw();
             LoadCharacters();
         }
 
         public void LoadCharacters()
         {
             _characters = _characterService.GetAllCharacters();
-            _characterListView.SetSource(
-                _characters.ConvertAll(c => $"{c.Name} ({c.Class}. {c.Level})")
-            );
+            _characterListView.SetSource(_characters.ConvertAll(c => $"{c.Name}"));
         }
     }
 }

@@ -8,7 +8,7 @@ Application.Init();
 try
 {
     //Application.Run(new MyView());
-    Application.Run(NavigationService.Show(new CharacterListView()));
+    Application.Run(new MainWindow());
 }
 finally
 {

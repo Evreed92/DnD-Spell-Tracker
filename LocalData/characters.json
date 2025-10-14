@@ -2,30 +2,30 @@
   {
     "Name": "Elara",
     "Class": "Wizard",
-    "Level": 5,
-    "KnownSpells": [ { "Id": 1 }, { "Id": 2 }, { "Id": 3 } ],
-    "PreparedSpells": [ { "Id": 2 }, { "Id": 3 } ]
+    "Level": 5
+   
+  
   },
   {
     "Name": "Thorn",
     "Class": "Druid",
-    "Level": 4,
-    "KnownSpells": [ { "Id": 4 }, { "Id": 5 }, { "Id": 6 } ],
-    "PreparedSpells": [ { "Id": 4 }, { "Id": 6 } ]
+    "Level": 4
+    
+   
   },
   {
     "Name": "Mira",
     "Class": "Cleric",
-    "Level": 6,
-    "KnownSpells": [ { "Id": 7 }, { "Id": 8 }, { "Id": 9 } ],
-    "PreparedSpells": [ { "Id": 7 }, { "Id": 8 } ]
+    "Level": 6
+    
+   
   },
   {
     "Name": "Verrin",
     "Class": "Warlock",
-    "Level": 5,
-    "KnownSpells": [ { "Id": 10 }, { "Id": 11 }, { "Id": 12 } ],
-    "PreparedSpells": [ { "Id": 10 }, { "Id": 12 } ]
+    "Level": 5
+    
+   
   }
 ]
 

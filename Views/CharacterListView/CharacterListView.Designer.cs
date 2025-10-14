@@ -3,6 +3,7 @@ using myTuiProj.Domain.Models;
 using myTuiProj.Services.LocalServices;
 using myTuiProj.Services.ServiceInterfaces;
 using myTuiProj.Services.UIServices;
+using myTuiProj.Views;
 using Terminal.Gui;
 
 namespace myTuiProj.Views
@@ -13,8 +14,12 @@ namespace myTuiProj.Views
         public ListView _characterListView;
         public Button _backButton;
 
-        private void Init()
+        public override ColorScheme ColorScheme { get; set; }
+
+        private void Draw()
         {
+            ColorScheme = new ColorScheme();
+            ColorScheme.Focus = new Terminal.Gui.Attribute(Color.Black, Color.Cyan);
             _characterListView = new ListView
             {
                 X = 0,
