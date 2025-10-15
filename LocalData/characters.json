@@ -1,0 +1,43 @@
+[
+  {
+    "CharacterName": "Thorin Oakenshield",
+    "Race": "Dwarf",
+    "Level": 5,
+    "ClassList": [
+      { "ClassName": "Fighter", "ClassLevel": 5 }
+    ]
+  },
+  {
+    "CharacterName": "Lyra Silverwind",
+    "Race": "Elf",
+    "Level": 3,
+    "ClassList": [
+      { "ClassName": "Wizard", "ClassLevel": 3 }
+    ]
+  },
+  {
+    "CharacterName": "Garruk Stonehide",
+    "Race": "Half-Orc",
+    "Level": 2,
+    "ClassList": [
+      { "ClassName": "Barbarian", "ClassLevel": 2 }
+    ]
+  },
+  {
+    "CharacterName": "Seraphina Emberlight",
+    "Race": "Halfling",
+    "Level": 4,
+    "ClassList": [
+      { "ClassName": "Rogue", "ClassLevel": 4 }
+    ]
+  },
+  {
+    "CharacterName": "Elandor Brightstar",
+    "Race": "Human",
+    "Level": 1,
+    "ClassList": [
+      { "ClassName": "Cleric", "ClassLevel": 1 }
+    ]
+  }
+]
+

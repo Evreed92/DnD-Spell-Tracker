@@ -22,7 +22,9 @@ namespace myTuiProj.Views
         public void LoadCharacters()
         {
             _characters = _characterService.GetAllCharacters();
-            _characterListView.SetSource(_characters.ConvertAll(c => $"{c.CharacterName}"));
+            _characterListView.SetSource(
+                _characters.ConvertAll(c => $"{c.CharacterName} Level : {c.Level}")
+            );
         }
     }
 }
