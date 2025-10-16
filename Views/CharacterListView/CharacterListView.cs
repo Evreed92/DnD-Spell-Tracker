@@ -23,7 +23,9 @@ namespace myTuiProj.Views
         {
             _characters = _characterService.GetAllCharacters();
             _characterListView.SetSource(
-                _characters.ConvertAll(c => $"{c.CharacterName} Level : {c.Level}")
+                _characters.ConvertAll(c =>
+                    $"{c.CharacterName} Level: {c.Level} {c.ClassListAsString()}"
+                )
             );
         }
     }

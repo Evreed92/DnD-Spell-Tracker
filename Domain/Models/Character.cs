@@ -16,5 +16,15 @@ namespace myTuiProj.Domain.Models
         //Stats
         public List<Ability> Abilities { get; set; }
         public int ProficiencyBonus { get; set; } //Derived from Level
+
+        public string ClassListAsString()
+        {
+            string classListString = null;
+            foreach (ClassData c in this.ClassList)
+            {
+                classListString += $"{c.ClassName}({c.ClassLevel})";
+            }
+            return classListString;
+        }
     }
 }
