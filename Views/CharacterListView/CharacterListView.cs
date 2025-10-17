@@ -10,13 +10,15 @@ namespace myTuiProj.Views
     {
         private readonly ICharacterService _characterService;
         private List<Character> _characters;
+        private string player = "Evan Reed";
 
         public CharacterListView()
-            : base("Character List")
+            : base("")
         {
             _characterService = new LocalCharacterService();
             Draw();
             LoadCharacters();
+            this.Title = player + "'s Character List";
         }
 
         public void LoadCharacters()

@@ -13,6 +13,7 @@ namespace myTuiProj.Views
     {
         public ListView _characterListView;
         public Button _backButton;
+        public Label player_label;
 
         public override ColorScheme ColorScheme { get; set; }
 
@@ -27,7 +28,8 @@ namespace myTuiProj.Views
                 Width = Dim.Fill(),
                 Height = Dim.Fill(),
             };
-
+            this.player_label = new Terminal.Gui.Label();
+            this.player_label.Text = "Player : Evan Reed";
             this.Add(_characterListView);
         }
     }
