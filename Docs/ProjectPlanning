@@ -1,0 +1,7 @@
+10.19.25
+
+I am going to begin reworking this app from a single project, into a 3 project structure with an API, a Terminal.gui front ent, and a shared library.
+
+Currently looking at using the D&D 5e SRD API that is availble for free and then creating another location for custom made spells if they are needed later. 
+
+There will be a lot of research before more code just to make sure I have the structures of all the models clear and I have a good understanding of the API.

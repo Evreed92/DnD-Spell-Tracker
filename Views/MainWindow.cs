@@ -3,12 +3,12 @@ using Terminal.Gui;
 
 namespace myTuiProj.Views
 {
-    public class MainWindow : Window
+    public partial class MainWindow : Window
     {
         public override ColorScheme ColorScheme { get; set; }
 
         public MainWindow()
-            : base("SpellTracker | ctr+q to Quit")
+            : base("SpellTrackerApp | ctr+q to Quit")
         {
             Draw();
             CharacterListView characterListView = new CharacterListView();
@@ -21,7 +21,7 @@ namespace myTuiProj.Views
                 Height = Dim.Fill(),
             };
 
-            this.Add(characterListView, rightColumn);
+            //this.Add(characterListView, rightColumn);
         }
 
         private void Draw()
