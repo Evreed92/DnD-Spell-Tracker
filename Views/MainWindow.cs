@@ -13,15 +13,7 @@ namespace myTuiProj.Views
             Draw();
             CharacterListView characterListView = new CharacterListView();
 
-            var rightColumn = new View()
-            {
-                X = Pos.Right(characterListView),
-                Y = 0,
-                Width = Dim.Fill(),
-                Height = Dim.Fill(),
-            };
-
-            //this.Add(characterListView, rightColumn);
+            this.Add(characterListView);
         }
 
         private void Draw()
