@@ -5,26 +5,24 @@ namespace myTuiProj.Domain.Models
 {
     public class Character
     {
-        public string PlayerName { get; set; }
+        //Player Information
+        public string Player_Name { get; set; } = string.empty;
 
-        //Identity and Data
-        public string CharacterName { get; set; }
-        public string Race { get; set; } //Immportant for Stat Building
+        //Basic Character Information
+        public string Name { get; set; } = string.empty;
         public int Level { get; set; }
-        public List<ClassData> ClassList { get; set; }
+        public Race Race { get; set; }
+        public ClassData Class { get; set; }
 
-        //Stats
-        public List<Ability> Abilities { get; set; }
-        public int ProficiencyBonus { get; set; } //Derived from Level
+        public Dictionary<Ability, int> AbilityScores { get; set; }
+        public Dictionary<Ability, int> AbiliityModifiers { get; set; }
+        public List<Proficiency> SkillProficiencies { get; set; }
+        public List<SpellSummary> KnownSpells { get; set; }
+        public List<EquipmentItem> Equipment { get; set; }
 
-        public string ClassListAsString()
-        {
-            string classListString = null;
-            foreach (ClassData c in this.ClassList)
-            {
-                classListString += $"{c.ClassName}({c.ClassLevel})";
-            }
-            return classListString;
-        }
+        public int HitPoints { get; set; }
+        public int ArmorClass { get; set; }
+
+        public Background Background { get; set; }
     }
 }
